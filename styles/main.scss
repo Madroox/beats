@@ -1,0 +1,50 @@
+
+  .main-title {
+    font-family: "Play", sans-serif;
+    width: 400px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    padding-top: 13px;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+  }
+  .main__desc {
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    padding-bottom: 36px;
+  }
+
+  .description__list {
+    padding: 70px 0;
+    display: flex;
+  }
+  .description__item {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+  }
+  span[class^="description__img"] {
+    width: 41px;
+    height: 41px;
+    display: block;
+  }
+  .description__text{
+    width: 114px;
+    margin: 0 10px;
+  }
+
+  .description__img-noise{
+    background-image: url("./img/noise-mini.png");
+  }
+  .description__img-battery{
+    background-image: url("./img/battery-mini.png");
+  }
+  .description__img-powersocket{
+    background-image: url("./img/powersocket-mini.png");
+  }
+  

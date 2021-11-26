@@ -1,0 +1,74 @@
+.header {
+  width: 100%;
+  padding: rem(24px) 0 rem(50px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.logo {
+  margin-right: 10px;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.menu__item {
+  margin-right: rem(27px);
+  font-weight: 400;
+  font-size: rem(18px);
+  padding-top: 10px;
+}
+.menu__item:last-child() {
+  margin-right: 0px;
+}
+
+.menu__link:hover {
+  cursor: pointer;
+  color: #E01F3D;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+
+.telephone {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: rem(18px);
+  position: relative;
+  margin-right: rem(25px);
+  padding-top: 10px;
+}
+
+.telephone:hover {
+  cursor: pointer;
+  color: #E01F3D;
+}
+
+.telephone::before {
+  content: "";
+  display: block;
+  width: rem(14px);
+  height: rem(14px);
+  background: url("./img/phohe.png") center no-repeat;
+  position: absolute;
+  right: 103%;
+  top: 40%;
+}

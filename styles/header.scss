@@ -1,0 +1,57 @@
+.header {
+    width: 100%;
+    padding: 24px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.logo{
+    margin-right: 10px;
+}
+
+.menu__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu__item {
+    margin-right: 27px;
+    font-weight: 400;
+    font-size: 18px;
+    padding-top: 10px;
+    &:last-child(){
+        margin-right: 0px;
+    }
+}
+.menu__link:hover {
+    cursor: pointer;
+    color: #E01F3D;
+    transition: all ease-in-out .2s;
+}
+
+.telephone {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    position: relative;
+    margin-right: 25px;
+    padding-top: 10px;
+}
+
+.telephone:hover{
+    cursor: pointer;
+    color: #E01F3D;
+}
+.telephone::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: url("./img/phohe.png") center no-repeat;
+    position: absolute;
+    right: 103%;
+    top: 40%;
+}

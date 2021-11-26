@@ -1,0 +1,33 @@
+.hero {
+  height: 100%;
+  background: url("./img/headphones_main.png") left 70% top 66% no-repeat, #F5F5F5;
+  background-size: 60vh 60vh;
+  position: relative;
+}
+
+.hero__conteiner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  width: rem(46px);
+  height: rem(10px);
+  background: #C4C4C4;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: absolute;
+  right: 12%;
+  top: 100%;
+}

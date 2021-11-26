@@ -1,0 +1,44 @@
+.fixed-menu{
+    display: block;
+    position: fixed;
+    right: 3%;
+    top: 32%;
+
+}
+.fixed-menu__element{
+    margin-bottom: 12px;
+    &--active{
+        .fixed-menu__link{
+            border-color: #E01F3D;
+            &::before{
+                background: #E01F3D;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.fixed-menu__link{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    display: block;
+    position: relative;
+    &::before{
+        content: "";
+        width: 9px;
+        height: 9px;
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        background: #000;
+        opacity: .6;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);       
+    }
+}
+.fixed-menu.fixed-menu--color .fixed-menu__link::before{
+    background: white;
+}

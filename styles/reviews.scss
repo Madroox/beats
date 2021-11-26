@@ -1,0 +1,106 @@
+.reviews{
+  // height: 100vh;
+  height: 100%;
+  position: relative;
+}
+.reviews__conteiner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  .reviews__second-title{
+    font-size: 32px;
+  }
+  .reviews__persons{
+    padding-bottom: 10px;
+    position: relative;
+    min-height: 380px;
+  }
+  .rewiews__person {
+    display: flex;
+    padding: 35px 42px 10px 42px;
+    margin-top: 30px;
+    background: #F8FAF9;
+    margin-bottom: 16px;
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    &::after{
+      content: "";
+      display: block;
+      width: 83px;
+      height: 83px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      left: 47%;
+      top: -1%;
+      z-index: 50;
+    }
+
+  }
+  .rewiews__img{
+    width: 253px;
+    height: 264px;
+  }
+  .reviews__list {
+    margin-left: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    line-height: 18.5px;
+  }
+  .reviews__title {
+    font-family: "Play", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+
+  }
+  .reviews__title-perc {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #666;
+
+  }
+  .rewiews__name {
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  .pagginator {
+    display: flex;
+    justify-content: center;
+    margin: 0 6px;
+  }
+  .pagginator__link {
+    box-sizing: content-box;
+    border: 3px solid transparent;
+    width: 74px;
+    height: 74px;
+    display: block;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+.pagginator__link-one {
+  background: url("./img/photo_billy_ailish_mini.png") center no-repeat;
+}
+.pagginator__link-two {
+  background: url("./img/photo_vadim_grachev_mini.png") center no-repeat;
+}
+.pagginator__link-three {
+  background: url("./img/photo_maria_orlova_mini.png") center no-repeat;
+}
+.pagginator__element.active .pagginator__link{
+    border-color: $red;
+  }
+  .isActive{
+    position: static;
+    opacity: 1;
+  }

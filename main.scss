@@ -1,0 +1,19 @@
+$baseFontSize: 16px;
+
+$black: #292929;
+$red: #E01F3D;
+$grey: #999999;
+
+@import "layout/base";
+@import "layout/normalize";
+@import "styles/button";
+@import "styles/fixed-menu";
+@import "styles/form-section";
+@import "styles/hamburger";
+@import "styles/header";
+@import "styles/hero";
+@import "styles/main";
+@import "styles/reviews";
+@import "styles/section__form";
+@import "styles/why-beats";
+@import "styles/wrapper";
