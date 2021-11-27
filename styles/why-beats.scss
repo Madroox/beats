@@ -1,19 +1,19 @@
 .why-beats{
-  height: 100%;
+  height: 100vh;
 }
 
 .why-beats__conteiner {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
   .why-beats__conteiner::after {
     content: "";
     display: block;
     position: absolute;
-    top: 100%;
+    top: 100vh;
     right: 98%;
     width: 0;
     height: 0;
