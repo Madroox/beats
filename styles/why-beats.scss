@@ -1,108 +1,178 @@
-.why-beats{
+.why-beats {
   height: 100vh;
 }
 
+.why-beats__title {
+  @include tablets {
+    font-size: 48px;
+  }
+
+  @include phones {
+    padding: 0 8%;
+    font-size: 32px;
+  }
+}
+
 .why-beats__conteiner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+}
+
+.why-beats__conteiner::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 98%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: rem(4px) rem(24px) rem(31px) rem(12px);
+  border-color: transparent transparent #E01F3D transparent;
+  transform: rotate(109deg);
+  z-index: 100;
+}
+
+.why-beats__desc {
+  font-family: "Play", sans-serif;
+  padding-top: rem(18px);
+  font-weight: 400;
+  font-size: rem(16px);
+  text-align: center;
+  margin: 0 auto;
+  color: #666666;
+  padding-bottom: rem(60px);
+
+  @include phones {
+    padding: 0 5%;
+    font-size: 16px;
+    padding-top: rem(18px);
+    padding-bottom: rem(60px);
   }
-  .why-beats__conteiner::after {
+
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-between;
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.advantages__element {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-right: rem(19px);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:nth-child(2):before {
     content: "";
+    width: rem(100px);
+    height: rem(100px);
     display: block;
+    background: url("./img/combo_share.png") center no-repeat;
     position: absolute;
-    top: 100vh;
-    right: 98%;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 4px 24px 31px 12px;
-    border-color: transparent transparent #E01F3D transparent;
-    transform: rotate(109deg);
-    z-index: 100;
-  }
-  .why-beats__desc {
-    font-family: "Play", sans-serif;
-    padding-top: 18px;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    margin: 0 auto;
-    color: #666666;
-    padding-bottom: 60px;
+    left: -2.37rem;
+    top: rem(15px);
 
-  }
-  .advantages{
-    display: flex;
-    justify-content: space-between;
-
-  }
-
-  .advantages__element{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    margin-right: 19px;
-    &:last-child{
-      margin-right: 0;
-    }
-    &:nth-child(2):before{
-      content: "";
-      width: 100px;
-      height: 100px;
-      display: block;
-      background: url("./img/combo_share.png") center no-repeat;
-      position: absolute;
-      left: -2.37rem;
-      top: 15px;
-
-    }
-    &:last-child::before{
-      content: "";
-      width: 100px;
-      height: 100px;
-      display: block;
-      background: url("./img/combo_share.png") center no-repeat;
-      position: absolute;
-      left: -70px;
-      top: 15px;
+    @include tablets {
+      display: none;
     }
   }
-  .advantages__title{
-    font-weight: 700;
-    font-family: "Play", sans-serif;
-    font-weight: 700;
-    font-size: 24px;
-    text-align: center;
-    padding-bottom: 7px;
+
+  &:last-child::before {
+    content: "";
+    width: rem(100px);
+    height: rem(100px);
+    display: block;
+    background: url("./img/combo_share.png") center no-repeat;
+    position: absolute;
+    left: rem(-70px);
+    top: rem(15px);
+
+    @include tablets {
+      display: none;
+    }
   }
-  .advantages__title-desc {
-    font-family: "Play", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    text-align: center;
-    color: #666666;
+
+  @include phones {
+    flex-direction: row;
+    margin-bottom: rem(25px);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
+}
+
+.advantages__title {
+  font-weight: 700;
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: rem(24px);
+  text-align: center;
+  padding-bottom: rem(7px);
+
+  @include phones {
+    text-align: left;
+  }
+}
+
+.advantages__title-desc {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-size: rem(16px);
+  text-align: center;
+  color: #666666;
+
+  @include tablets {
+    margin-top: rem(10px);
+  }
+
+  @include phones {
+    text-align: left;
+  }
+}
+
 .advantages__img {
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    margin: 0 auto;
-    background: #F2F5F4;
-  }
+  width: rem(128px);
+  height: rem(128px);
+  border-radius: 50%;
+  margin: 0 auto;
+  background: #F2F5F4;
 
-  .advantages__battery {
-    background: url("./img/img_battery.png") center no-repeat, #F2F5F4;
-    position: relative;
-    
+  @include phones {
+    min-width: rem(128px);
   }
-  .advantages__sound {
-    background: url("./img/img_sound.png") center no-repeat, #F2F5F4;
-    position: relative;
-    
+}
+
+.advantages__content {
+  @include phones {
+    margin-left: rem(10px);
   }
-  .advantages__stopwotch{
-    background: url("./img/img_stopwotch.png") center no-repeat, #F2F5F4;
-  }
+}
+
+.advantages__battery {
+  background: url("./img/img_battery.png") center no-repeat, #F2F5F4;
+  position: relative;
+
+}
+
+.advantages__sound {
+  background: url("./img/img_sound.png") center no-repeat, #F2F5F4;
+  position: relative;
+
+}
+
+.advantages__stopwotch {
+  background: url("./img/img_stopwotch.png") center no-repeat, #F2F5F4;
+}

@@ -3,10 +3,12 @@
     position: fixed;
     right: 3%;
     top: 32%;
-
+    @media screen and (max-width: 865px){
+        display: none;
+    }
 }
 .fixed-menu__element{
-    margin-bottom: 12px;
+    margin-bottom: rem(12px);
     &--active{
         .fixed-menu__link{
             border-color: #E01F3D;
@@ -19,16 +21,16 @@
 }
 
 .fixed-menu__link{
-    width: 18px;
-    height: 18px;
+    width: rem(18px);
+    height: rem(18px);
     border-radius: 50%;
-    border: 1px solid transparent;
+    border: rem(1px) solid transparent;
     display: block;
     position: relative;
     &::before{
         content: "";
-        width: 9px;
-        height: 9px;
+        width: rem(9px);
+        height: rem(9px);
         display: block;
         position: absolute;
         border-radius: 50%;

@@ -10,8 +10,8 @@
 .form__title{
     font-family: "Play", sans-serif;
     font-weight: 700;
-    font-size: 48px;
-    margin: 65px auto 55px;
+    font-size: rem(48px);
+    margin: rem(65px) auto rem(55px);
     color: white;
 }
 .form {
@@ -19,7 +19,7 @@
   }
 .form__column {
     flex: 1;
-    margin-right: 40px;
+    margin-right: rem(40px);
     &:last-child {
       margin-right: 0;
     }
@@ -27,11 +27,11 @@
 
 .form__row {
     display: flex;
-    margin-bottom: 18px;
+    margin-bottom: rem(18px);
   }
 .form__label {
     flex: 1;
-    margin-right: 40px;
+    margin-right: rem(40px);
     &:last-child {
       margin-right: 0;
     }
@@ -40,9 +40,9 @@
 .form__input {
     width: 100%;
     border: none;
-    padding: 18px 0px 18px 12px;
-    border: 3px solid transparent;
-    border-radius: 4px;
+    padding: rem(18px) 0px rem(18px) rem(12px);
+    border: rem(3px) solid transparent;
+    border-radius: rem(4px);
     &:focus{
       border-color: #E01F3D;
     outline: none;
@@ -54,11 +54,11 @@
   .form__label-element {
     font-family: "Play", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: rem(16px);
     color: white;
   }
 .textarea {
-    height: 115px;
+    height: rem(115px);
     resize: none;
   }
   .form__control {

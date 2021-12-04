@@ -1,12 +1,19 @@
 .header {
     width: 100%;
-    padding: 24px 0 50px;
+    padding: rem(24px) 0 rem(50px);
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
-.logo{
+
+.logo {
     margin-right: 10px;
+}
+
+.menu {
+    @include tablets {
+        display: none;
+    }
 }
 
 .menu__list {
@@ -17,14 +24,16 @@
 }
 
 .menu__item {
-    margin-right: 27px;
+    margin-right: rem(27px);
     font-weight: 400;
-    font-size: 18px;
+    font-size: rem(18px);
     padding-top: 10px;
-    &:last-child(){
+
+    &:last-child() {
         margin-right: 0px;
     }
 }
+
 .menu__link:hover {
     cursor: pointer;
     color: #E01F3D;
@@ -35,23 +44,36 @@
     font-family: "Play", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 18px;
+    font-size: rem(18px);
     position: relative;
-    margin-right: 25px;
+    margin-right: rem(25px);
     padding-top: 10px;
 }
 
-.telephone:hover{
+.header__telephone {
+    @include tablets {
+        display: none;
+    }
+}
+
+.telephone:hover {
     cursor: pointer;
     color: #E01F3D;
 }
+
 .telephone::before {
     content: "";
     display: block;
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     background: url("./img/phohe.png") center no-repeat;
     position: absolute;
     right: 103%;
     top: 40%;
+
+    @include phones {
+        width: rem(16px);
+        height: rem(16px);
+        right: 74%;
+    }
 }

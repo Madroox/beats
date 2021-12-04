@@ -1,105 +1,169 @@
-.reviews{
-  height: 100vh;
+.reviews {
+  height: 100vh;  
   position: relative;
 }
-.reviews__conteiner{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100vh;
+
+.reviews__conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.reviews__second-title {
+  font-size: 32px;
+}
+
+.reviews__persons {
+  padding-bottom: rem(10px);
+  position: relative;
+  min-height: 380px;
+
+  @include tablets {
+    margin-top: 20px;
   }
-  .reviews__second-title{
-    font-size: 32px;
-  }
-  .reviews__persons{
-    padding-bottom: 10px;
-    position: relative;
-    min-height: 380px;
-  }
-  .rewiews__person {
-    display: flex;
-    padding: 35px 42px 10px 42px;
-    margin-top: 30px;
-    background: #F8FAF9;
-    margin-bottom: 16px;
+}
+
+.rewiews__person {
+  display: flex;
+  padding: rem(35px) rem(42px) rem(10px) rem(42px);
+  margin-top: rem(30px);
+  background: #F8FAF9;
+  margin-bottom: 16px;
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: rem(83px);
+    height: rem(83px);
+    background: white;
+    border-radius: 50%;
     position: absolute;
-    overflow: hidden;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    opacity: 0;
-    &::after{
-      content: "";
-      display: block;
-      width: 83px;
-      height: 83px;
-      background: white;
-      border-radius: 50%;
-      position: absolute;
-      left: 47%;
-      top: -1%;
-      z-index: 50;
+    left: 47%;
+    top: -1%;
+    z-index: 50;
+
+    @include tablets {
+      width: 4.1875rem;
+      height: 4.1875rem;
+      left: 45%;
+      top: -4%;
     }
 
+    @include phones {
+      display: none;
+    }
   }
-  .rewiews__img{
-    width: 253px;
-    height: 264px;
-  }
-  .reviews__list {
-    margin-left: 34px;
+
+  @include tablets {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    line-height: 18.5px;
+    text-align: center;
+    justify-content: space-between;
+    margin: rem(10px) rem(20px) rem(30px);
   }
-  .reviews__title {
-    font-family: "Play", sans-serif;
-    font-size: 24px;
-    font-weight: 700;
+}
 
+.rewiews__img {
+  width: rem(253px);
+  height: rem(264px);
+
+  @include tablets {
+    width: rem(135px);
+    max-height: rem(135px);
+    margin: rem(20px) auto rem(35px);
   }
-  .reviews__title-perc {
-    font-family: "Play", sans-serif;
+}
+
+.reviews__list {
+  margin-left: rem(34px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  line-height: rem(18.5px);
+}
+
+.reviews__title {
+  font-family: "Play", sans-serif;
+  font-size: rem(24px);
+  font-weight: 700;
+
+  @include tablets {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+.reviews__title-perc {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-size: rem(16px);
+  color: #666;
+
+  @include tablets {
+    margin: rem(20px) rem(-25px) rem(40px);
+    font-size: rem(15px);
+  }
+}
+
+.rewiews__name {
+  font-family: "Play", sans-serif;
+  font-weight: 700;
+  font-size: rem(18px);
+
+  @include tablets {
     font-weight: 400;
-    font-size: 16px;
-    color: #666;
+    font-size: rem(16px);
+  }
 
+  @include phones {
+    font-size: rem(15px);
   }
-  .rewiews__name {
-    font-family: "Play", sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  .pagginator {
-    display: flex;
-    justify-content: center;
-    margin: 0 6px;
-  }
-  .pagginator__link {
-    box-sizing: content-box;
-    border: 3px solid transparent;
-    width: 74px;
-    height: 74px;
-    display: block;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-right: 10px;
-  }
+
+}
+
+.pagginator {
+  display: flex;
+  justify-content: center;
+  margin: 0 rem(6px);
+}
+
+.pagginator__link {
+  box-sizing: content-box;
+  border: 3px solid transparent;
+  width: rem(74px);
+  height: rem(74px);
+  display: block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: rem(10px);
+}
+
 .pagginator__link-one {
   background: url("./img/photo_billy_ailish_mini.png") center no-repeat;
 }
+
 .pagginator__link-two {
   background: url("./img/photo_vadim_grachev_mini.png") center no-repeat;
 }
+
 .pagginator__link-three {
   background: url("./img/photo_maria_orlova_mini.png") center no-repeat;
 }
-.pagginator__element.active .pagginator__link{
-    border-color: $red;
-  }
-  .isActive{
-    position: static;
-    opacity: 1;
-  }
+
+.pagginator__element.active .pagginator__link {
+  border-color: $red;
+}
+
+.isActive {
+  position: static;
+  opacity: 1;
+}

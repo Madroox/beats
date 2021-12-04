@@ -1,16 +1,16 @@
 .button {
-    padding: 23px 50px;
+    padding: rem(23px) rem(50px);
     background-color: #E01F3D;
     color: white;
     font-family: "Play", sans-serif;
     font-weight: 700;
     font-style: normal;
-    font-size: 16px;
+    font-size: rem(16px);
     border: 1px solid transparent;
-    border-radius: 100px;
+    border-radius: rem(100px);
     outline: none;
     &:--close{
-      padding: 7px 30px;
+      padding: rem(7px) rem(30px);
     }
   }
   .button:hover {

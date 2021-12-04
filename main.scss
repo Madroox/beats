@@ -1,20 +1,30 @@
+//screen
+$tablets: 768px;
+$phones: 480px;
+
+//FontSize
 $baseFontSize: 16px;
 
+
+// colors
 $black: #292929;
 $red: #E01F3D;
 $grey: #999999;
 
+@import "layout/media.scss";
 @import "layout/base";
 @import "layout/normalize";
-@import "styles/button";
-@import "styles/fixed-menu";
-@import "styles/form-section";
-@import "styles/hamburger";
-@import "styles/header";
-@import "styles/hero";
-@import "styles/main";
-@import "styles/radio";
-@import "styles/reviews";
-@import "styles/section__form";
-@import "styles/why-beats";
 @import "styles/wrapper";
+@import "styles/header";
+@import "styles/hamburger";
+@import "styles/button";
+@import "styles/main";
+@import "styles/why-beats";
+@import "styles/why_beats";
+@import "styles/reviews";
+@import "styles/form-section";
+@import "styles/radio";
+@import "styles/hero";
+@import "styles/map";
+@import "styles/fixed-menu";
+@import "styles/hide-menu";

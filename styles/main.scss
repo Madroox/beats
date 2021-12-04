@@ -1,50 +1,104 @@
-
-  .main-title {
-    font-family: "Play", sans-serif;
-    width: 400px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    padding-top: 13px;
-    margin-bottom: 14px;
-    text-transform: uppercase;
-  }
-  .main__desc {
-    font-weight: 400;
-    font-style: normal;
-    font-size: 21px;
-    padding-bottom: 36px;
-  }
-
-  .description__list {
-    padding: 70px 0;
+.main {
+  @include tablets {
     display: flex;
-  }
-  .description__item {
-    font-family: "Play", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    font-style: normal;
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+
+    &::before {
+      content: "";
+      width: 22.9375rem;
+      height: 15.9375rem;
+      display: block;
+      background: url("./img/headphones_main.png") center no-repeat;
+      background-size: contain;
+      padding-bottom: 20px;
+    }
   }
-  span[class^="description__img"] {
-    width: 41px;
-    height: 41px;
-    display: block;
-  }
-  .description__text{
-    width: 114px;
-    margin: 0 10px;
+}
+
+.main-title {
+  font-family: "Play", sans-serif;
+  width: rem(400px);
+  font-style: normal;
+  font-weight: 700;
+  font-size: rem(48px);
+  padding-top: 13px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+
+  @include tablets {
+    width: 100%;
+    padding: 0 10%;
+    margin-bottom: 12px;
   }
 
-  .description__img-noise{
-    background-image: url("./img/noise-mini.png");
+  @include phones {
+    padding: 0 15%;
+    text-align: center;
+    font-size: 32px;
+    margin-top: 36px;
   }
-  .description__img-battery{
-    background-image: url("./img/battery-mini.png");
+}
+
+.main__desc {
+  font-weight: 400;
+  font-style: normal;
+  font-size: rem(21px);
+  padding-bottom: rem(36px);
+
+  @include tablets {
+    width: 100%;
+    padding: 0 25% rem(20px);
   }
-  .description__img-powersocket{
-    background-image: url("./img/powersocket-mini.png");
+
+  @include phones {
+    padding: 0 10%;
+    margin-bottom: 23px;
   }
-  
+}
+
+.description {
+  @include tablets {
+    display: none;
+  }
+}
+
+.description__list {
+  padding: rem(70px) 0;
+  display: flex;
+}
+
+.description__item {
+  font-family: "Play", sans-serif;
+  font-weight: 400;
+  font-size: rem(16px);
+  font-style: normal;
+  display: flex;
+  align-items: center;
+}
+
+span[class^="description__img"] {
+  width: rem(41px);
+  height: rem(41px);
+  display: block;
+}
+
+.description__text {
+  width: rem(114px);
+  margin: 0 rem(10px);
+}
+
+.description__img-noise {
+  background-image: url("./img/noise-mini.png");
+}
+
+.description__img-battery {
+  background-image: url("./img/battery-mini.png");
+}
+
+.description__img-powersocket {
+  background-image: url("./img/powersocket-mini.png");
+}
