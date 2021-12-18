@@ -1,0 +1,132 @@
+.team{
+  // height: 100vh;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.team__list{
+  display: flex;
+  justify-content: space-around;
+  margin-top: rem(50px);
+  @include tablets{
+    display: none;
+  }
+}
+.team__list--tablets{
+  display: none;
+  @include tablets{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: start;
+    height: 500px;
+  }
+}
+.team__conteiner {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: rem(50px);
+  justify-content: center;
+  &::before{
+  content: "";
+  display: block;
+  width: rem(24px);
+  height: rem(24px);
+  background: #292929;
+  position: absolute;
+  transform: rotate(20deg);
+  top: -26%;
+  left: 85%;
+  }
+}
+  .team__img{
+    display: block;
+    max-width: 290px;
+    @media screen and (max-width: 1060px){
+      max-width: 175px;
+    }
+    @include tablets{
+      margin: 0 auto;
+    }
+  }
+  .team__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    margin-right: 15px;
+    position: relative;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  .team__link {
+    display: inline-block;
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-size: rem(18px);
+    padding-top: rem(25px);
+    position: relative;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    &:after{
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: rem(9px) rem(4.5px) 0 rem(4.5px);
+      border-color: #e01f3c transparent transparent transparent;
+      position: absolute;
+      left: 103%;
+      top: 70%;
+    }
+    @include tablets{
+      margin-bottom: 15px;
+    }
+  }
+.team__prof {
+    font-family: "Play", sans-serif;
+    font-weight: 600;
+    font-size: rem(16px);
+    padding-top: rem(13px);
+  }
+  .team__duties {
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-size: rem(16px);
+    padding-top: rem(9px);
+    color: #666666;
+  }
+.team__transform-element{
+  position: relative;
+}
+
+.team__hidden-conteiner{
+  height: 0px;
+  overflow: hidden;
+  transition: all linear .5s .1s;
+  position: absolute;
+  top: 100%;
+  @include tablets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: static;
+  }
+}
+.team__hidden-conteiner__block{
+  max-height: 600px;
+}
+
+.team__item.active .team__link::after{
+  transform: rotateX(180deg);
+  transition: all linear .5s .1s;
+}
