@@ -11,7 +11,7 @@ $black: #292929;
 $red: #E01F3D;
 $grey: #999999;
 
-@import "layout/media.scss";
+@import "./media";
 @import "layout/base";
 @import "layout/normalize";
 @import "styles/wrapper";
@@ -20,10 +20,10 @@ $grey: #999999;
 @import "styles/button";
 @import "styles/main";
 @import "styles/why-beats";
-@import "styles/why_beats";
 @import "styles/offers";
 @import "styles/team";
 @import "styles/reviews";
+@import "styles/hove_we_work";
 @import "styles/form-section";
 @import "styles/radio";
 @import "styles/hero";
@@ -31,3 +31,7 @@ $grey: #999999;
 @import "styles/fixed-menu";
 @import "styles/hide-menu";
 @import "styles/send-complate";
+@import "styles/colors";
+
+
+

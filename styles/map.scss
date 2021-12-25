@@ -1,16 +1,13 @@
-.map-section {
-  height: 100%;
-  position: relative;
-  background: url("./img/map.png") no-repeat;
-  background-size: 100%;
+.map-section{
+    // height: 100vh;
+    height: 100%;
+    position: relative;
 }
-
-#map {
-  height: 100%;
-  width: 100%;
+#map{
+    height: 100%;
+    width: 100%;
 }
-
-.footer {
+.footer{
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -18,76 +15,60 @@
   right: 0;
 
 }
-
 .footer__conteiner-main {
-  display: flex;
-  align-items: center;
-  padding: rem(20px) 0;
-  background: #fff;
-
-}
-
-.footer__conteiner-second {
-  @include phones {
-    flex-direction: column;
-    justify-content: space-between;
+    display: flex;
     align-items: center;
+    padding: rem(20px) 0;
+    background: #fff;
+
   }
-}
-
-.footer__contacts {
-  justify-content: start;
-}
-
-.footer__element {
-  font-family: "Play", sans-serif;
-  font-weight: 400;
-  font-size: rem(18px);
-  font-style: normal;
-
-  @include tablets {
-    font-size: 21px;
-  }
-
-  @include phones {
-    margin: 20px 0;
-    text-align: center;
-
-    &:last-child {
-      margin-bottom: 20px;
+  .footer__conteiner-second{
+    @include phones{
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
     }
   }
-}
-
-.socials__list {
+  .footer__contacts {
+    justify-content: start;
+  }
+  .footer__element{
+    font-family: "Play", sans-serif;
+    font-weight: 400;
+    font-size: rem(18px);
+    font-style: normal;
+    @include tablets{
+      font-size: 21px;
+    }
+    @include phones{
+      margin: 20px 0;
+      text-align: center;
+      &:last-child{
+        margin-bottom: 20px;
+      }
+    }
+  }
+.socials__list{
   display: flex;
 }
-
-.footer__telephone {
-  margin-left: 20px;
-
-  @include tablets {
-    font-size: 18px;
-  }
+.footer__telephone{
+    margin-left: 20px;
+    @include tablets{
+      font-size: 18px;
+    }
 }
-
-.socials__item {
+.socials__item{
   margin-right: 5px;
-
-  &:last-child {
+  &:last-child{
     margin-right: 0;
   }
 }
-
-.vk-icon,
-.fb-icon,
-.inst-icon,
-.telegramm-icon {
+.vk-icon, .fb-icon, .inst-icon, .telegramm-icon{
   width: 30px;
   height: 30px;
   fill: #B3B3B3;
 
-  &:hover {
+  &:hover{
     fill: black;
     cursor: pointer;
     transition: all ease-in-out .2s;

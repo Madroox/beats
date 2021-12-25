@@ -5,17 +5,14 @@
     justify-content: space-between;
     align-items: flex-start;
 }
-
-.logo {
+.logo{
     margin-right: 10px;
 }
-
-.menu {
-    @include tablets {
+.menu{
+    @include tablets{
         display: none;
     }
 }
-
 .menu__list {
     display: flex;
     justify-content: center;
@@ -28,12 +25,10 @@
     font-weight: 400;
     font-size: rem(18px);
     padding-top: 10px;
-
-    &:last-child() {
+    &:last-child(){
         margin-right: 0px;
     }
 }
-
 .menu__link:hover {
     cursor: pointer;
     color: #E01F3D;
@@ -49,18 +44,15 @@
     margin-right: rem(25px);
     padding-top: 10px;
 }
-
-.header__telephone {
-    @include tablets {
+.header__telephone{
+    @include tablets{
         display: none;
     }
 }
-
-.telephone:hover {
+.telephone:hover{
     cursor: pointer;
     color: #E01F3D;
 }
-
 .telephone::before {
     content: "";
     display: block;
@@ -70,8 +62,7 @@
     position: absolute;
     right: 103%;
     top: 40%;
-
-    @include phones {
+    @include phones{
         width: rem(16px);
         height: rem(16px);
         right: 74%;
