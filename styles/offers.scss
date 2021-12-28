@@ -19,7 +19,7 @@
   width: 88%;
   position: relative;
   @include tablets {
-    width: 95%;
+    width: 100%;
   }
 }
 .offer__img{
@@ -29,6 +29,7 @@
   }
   @media screen and (max-width: 750px){
     max-height: 17.5rem;
+    margin-right: 38px;
   }
 }
 
